@@ -1,12 +1,9 @@
+import Router from "./Router/Router";
 
-import PokemonCart from './components/pokemonCart';
-
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <PokemonCart/>
+    <div>
+      <Router />
     </div>
   );
 }
-
-export default App;
