@@ -23,4 +23,3 @@ const PokemonCart = () => {
 };
 
 export default PokemonCart;
-
