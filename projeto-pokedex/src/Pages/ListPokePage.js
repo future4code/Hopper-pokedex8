@@ -10,8 +10,9 @@ console.log(pokemons)
   return (
     <>  
           <h1><u>ListPokePage</u></h1>
-          {pokemons.map((pokemon)=>{
-            return <PokemonCart/>;
+          {pokemons &&
+          pokemons.map((pokemon)=>{
+            return <PokemonCart name={pokemon.name} src={pokemon.url}/>;
           })}
 
           

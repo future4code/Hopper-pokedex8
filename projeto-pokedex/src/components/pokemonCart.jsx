@@ -2,12 +2,19 @@ import React from "react";
 import { ProductImage,  CardContainer,  Button,  ButtonContainer} from "./styledPokeCart";
 import { useNavigate } from "react-router-dom";
 
-const PokemonCart = () => {
+
+
+const PokemonCart = (props) => {
 const navigate = useNavigate();
+const {name, url} = props;
+
+
 
   return (
     <CardContainer>
-      <ProductImage alt={"pokemon"} src={`https://www.euax.com.br/wp-content/uploads/2019/10/Teste.png`} />
+      
+
+      <ProductImage alt={name} src={url} />
      
         <ButtonContainer>
         <Button onClick={() => navigate("pokedexpage")}>Visualizar pokedex</Button>

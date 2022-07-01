@@ -7,7 +7,7 @@ const useRequestData = (url) => {
     useEffect(()=>{
         axios.get(url)
         .then((res)=>{
-            setData([res.data.results])
+            setData(res.data.results)
         })
         .catch((err) =>{
             alert('Ocorreu um erro')
