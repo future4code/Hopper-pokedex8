@@ -15,10 +15,11 @@ const ListPokePage = (props) => {
   const addToPokedex = (pokemon) =>{
     const copy = [...pokedex, pokemon]
     setPokedex(copy);
+   
   
   }
 
-console.log(pokedex)
+
 
 
 return (
@@ -28,7 +29,7 @@ return (
           <ListContainer>
             {pokemons &&
             pokemons.map((pokemon)=>{
-               return <PokemonCard id={pokemon.name} name={pokemon.name} url={pokemon.url} addToPokedex={addToPokedex}/>;
+               return <PokemonCard id={pokemon.url} name={pokemon.name} url={pokemon.url} pokemon={pokemon} addToPokedex={addToPokedex}/>;
             })}
          </ListContainer>           
     </>
