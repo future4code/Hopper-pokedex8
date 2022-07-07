@@ -4,15 +4,12 @@ export const Container = styled.div
     `
 display:flex;
 flex-direction: column;
-background-color:cyan;
+background-color:red;
 padding:20px;
-margin:-10px;
-width:283vh;
-
+width:100%;
 
 .header{
     display:flex;
-    justify-content: space-between;    
+    justify-content: space-between;
 }
-
 `;

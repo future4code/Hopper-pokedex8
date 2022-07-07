@@ -4,7 +4,6 @@ import PokedexPage from "../Pages/PokedexPage";
 import DetailsPokemonPage from "../Pages/DetailsPokemonPage";
 import ErrorPage from "../Pages/ErrorPage";
 
-
 const Router = () => {
     return (
       <>

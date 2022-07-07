@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-
 const PokemonCard = (props) => {
 const navigate = useNavigate();
 const {name, url} = props;

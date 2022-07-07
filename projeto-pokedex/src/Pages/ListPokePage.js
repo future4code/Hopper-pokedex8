@@ -2,25 +2,17 @@ import PokemonCard from "../components/pokemonCard"
 import  "../components/Styled_PokeCard"
 import useRequestData from "../hooks/useRequestData";
 import { ListContainer } from "./Styled_ListPokePage";
-
 import React from "react";
-
-
-
 
 const ListPokePage = () => {
 
-
  const pokemons = useRequestData('https://pokeapi.co/api/v2/pokemon')
-
 
 console.log(pokemons)
 
-
-
 return (
     <>  
-          <h1><u>ListPokePage</u></h1>
+          <h1><u>List Poke Page</u></h1>
           <ListContainer>
             {pokemons &&
             pokemons.map((pokemon)=>{
@@ -31,6 +23,5 @@ return (
     </>
   );
 };
-
 
 export default ListPokePage;

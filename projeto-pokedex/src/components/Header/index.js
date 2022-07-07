@@ -6,7 +6,7 @@ const Header = () => {
     return (
       <Container>
     <div>
-        <div className="header">
+          <div className="header">
           <button onClick={() => navigate("/")}>Voltar</button>
           <button onClick={() => navigate("pokedexpage")}>Visualizar pokedex</button>
     </div>
