@@ -13,7 +13,7 @@ const PokedexPage = (props) => {
         <Header/>
 
         {pokedex && pokedex.map((pokemon)=>{
-          return <PokemonCard key={pokemon.id}  id={pokemon.name} name={pokemon.name} url={pokemon.url}/>
+          return <PokemonCard key={pokemon.id}  id={pokemon.name}  name={pokemon.name} url={pokemon.url}/>
         })}
       </>
     );

@@ -1,6 +1,6 @@
 import PokemonCard from "../components/pokemonCard"
 import  "../components/Styled_PokeCard"
-import { ListContainer } from "./Styled_ListPokePage";
+import { ContainerPrinc, ImgLogo, ListContainer } from "./Styled_ListPokePage";
 import React from "react";
 import Header from "../components/Header";
 
@@ -22,16 +22,15 @@ console.log(pokedex)
 
 
 return (
-    <>  
-          <h1><u>ListPokePage</u></h1>
-          <Header/>
+    <ContainerPrinc>  
+          <ImgLogo src="assets/logo-poke.png"/>
           <ListContainer>
             {pokemons &&
             pokemons.map((pokemon)=>{
                return <PokemonCard id={pokemon.name} name={pokemon.name} url={pokemon.url} addToPokedex={addToPokedex}/>;
             })}
          </ListContainer>           
-    </>
+    </ContainerPrinc>
   );
 };
 
