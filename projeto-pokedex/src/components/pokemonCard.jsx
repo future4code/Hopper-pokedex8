@@ -29,7 +29,7 @@ console.log(poke)
      
         <ButtonContainer>
         <Button onClick={() => navigate("pokedexpage")}>Visualizar pokedex</Button>
-        <Button onClick={() => navigate("detailspage")}>Detalhes do Pokemon</Button>
+        <Button onClick={() => navigate("/detailspage/:id")}>Detalhes do Pokemon</Button>
         </ButtonContainer>
     </CardContainer>
   );

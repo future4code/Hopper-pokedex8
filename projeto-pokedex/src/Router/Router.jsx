@@ -10,8 +10,8 @@ const Router = () => {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<ListPokePage/>} />            
-            <Route path="pokedexpage" element={<PokedexPage />} />
-            <Route path="detailspage" element={<DetailsPokemonPage />} /> 
+            <Route path="/pokedexpage" element={<PokedexPage />} />
+            <Route path="/detailspage/:id" element={<DetailsPokemonPage />} /> 
             <Route path="*" element={<ErrorPage />} />        
           </Routes>
         </BrowserRouter>
