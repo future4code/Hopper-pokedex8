@@ -5,7 +5,7 @@ Nome dos integrantes:
 - Gabriel Rosa
 - Roberta Santos
 
-Link do Surge: www.link.com.br
+Link do Surge: ignorant-tray.surge.sh
 
 O que funciona:
 - Lista de pokemons
