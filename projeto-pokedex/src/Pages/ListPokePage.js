@@ -8,17 +8,28 @@ import Header from "../components/Header";
 
 
 const ListPokePage = (props) => {
-  const {pokedex, setPokedex, pokemons} = props;
+  const {pokedex, setPokedex} = props;
+  let{pokemons} = props
 
   // const pokemons = useRequestData('https://pokeapi.co/api/v2/pokemon');
 
   const addToPokedex = (pokemon) =>{
     const copy = [...pokedex, pokemon]
-    setPokedex(copy);
-   
-  
-  }
+      setPokedex(copy);
+    const index = pokemons.findIndex((poke)=>{
+      if(poke.url === pokemon){
+        return true
+      }else{
+        return false         
+      }
+    })
+    console.log(index)
+    if(index){
+    pokemons.splice(index, 1)};
 
+    console.log(pokemons) 
+   
+ }
 
 
 
