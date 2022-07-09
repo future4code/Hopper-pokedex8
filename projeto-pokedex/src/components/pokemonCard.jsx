@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-
 const PokemonCard = (props) => {
 const navigate = useNavigate();
 const {name, url, id} = props;
@@ -29,8 +28,9 @@ useEffect(()=>{
       <ProductImage alt={name} src={poke} />
      
         <ButtonContainer>
+
         <Button onClick={() =>props.addToPokedex(id)}>Adicionar a pokedex</Button>
-        <Button onClick={() => navigate("detailspage")}>Detalhes do Pokemon</Button>
+        <Button onClick={() => navigate("detailspage/:id")}>Detalhes do Pokemon</Button>
         </ButtonContainer>
     </CardContainer>
   );

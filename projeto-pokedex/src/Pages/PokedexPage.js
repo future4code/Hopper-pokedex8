@@ -2,15 +2,8 @@ import Header from "../components/Header";
 import PokemonCard from "../components/pokemonCard";
 import { ListContainer } from "./Styled_ListPokePage";
 
-
-
 const PokedexPage = (props) => {
   const {pokedex} = props;
-  
-
-
-
-  
 
     return (
       <>

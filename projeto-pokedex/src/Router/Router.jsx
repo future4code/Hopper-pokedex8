@@ -6,7 +6,6 @@ import ErrorPage from "../Pages/ErrorPage";
 import { useState } from "react";
 import useRequestData from "../hooks/useRequestData";
 
-
 const Router = () => {
   const [pokedex, setPokedex] = useState([]);
   const pokemons = useRequestData('https://pokeapi.co/api/v2/pokemon');

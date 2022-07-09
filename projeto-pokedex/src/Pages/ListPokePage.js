@@ -4,9 +4,6 @@ import { ContainerPrinc, ImgLogo, ListContainer } from "./Styled_ListPokePage";
 import React from "react";
 import Header from "../components/Header";
 
-
-
-
 const ListPokePage = (props) => {
   const {pokedex, setPokedex} = props;
   let{pokemons} = props
@@ -27,11 +24,8 @@ const ListPokePage = (props) => {
     if(index){
     pokemons.splice(index, 1)};
 
-    console.log(pokemons) 
-   
- }
-
-
+    console.log(pokemons)   
+  }
 
 return (
     <ContainerPrinc>  
@@ -45,6 +39,5 @@ return (
     </ContainerPrinc>
   );
 };
-
 
 export default ListPokePage;
