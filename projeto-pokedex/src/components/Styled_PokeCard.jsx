@@ -10,6 +10,7 @@ export const CardContainer = styled.div`
   align-items: center;
   margin: 10px;
   background-color: lightgray;
+  z-index: 2;
 `;
 
 export const ButtonContainer = styled.div`
