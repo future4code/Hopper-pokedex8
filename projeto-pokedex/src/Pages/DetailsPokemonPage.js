@@ -21,7 +21,7 @@ const DetailsPokemonPage = () => {
 
   const getPokemon = (id) => {
     axios
-      .get(`${BASE_URL}${id}`)
+      .get(`${BASE_URL}/${id}`)
       .then((res) => {
         setPokemon(res.data);
       })

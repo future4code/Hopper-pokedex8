@@ -1,23 +1,29 @@
 import PokemonCard from "../components/pokemonCard"
 import  "../components/Styled_PokeCard"
-import useRequestData from "../hooks/useRequestData";
 import { ListContainer } from "./Styled_ListPokePage";
 import React from "react";
+import Header from "../components/Header";
 
-const ListPokePage = () => {
+const ListPokePage = (props) => {
+  const {pokedex, setPokedex, pokemons} = props;
 
- const pokemons = useRequestData('https://pokeapi.co/api/v2/pokemon')
+  // const pokemons = useRequestData('https://pokeapi.co/api/v2/pokemon');
 
-console.log(pokemons)
+  const addToPokedex = (pokemon) =>{
+    const copy = [...pokedex, pokemon]
+    setPokedex(copy);
+   
+  
+  }
 
 return (
     <>  
-          <h1><u>List Poke Page</u></h1>
+          <h1><u>ListPokePage</u></h1>
+          <Header/>
           <ListContainer>
             {pokemons &&
             pokemons.map((pokemon)=>{
-              console.log(pokemon.url)
-              return <PokemonCard name={pokemon.name} url={pokemon.url}/>;
+               return <PokemonCard id={pokemon.url} name={pokemon.name} url={pokemon.url} pokemon={pokemon} addToPokedex={addToPokedex}/>;
             })}
          </ListContainer>           
     </>

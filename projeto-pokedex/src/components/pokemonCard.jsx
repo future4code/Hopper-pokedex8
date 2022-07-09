@@ -6,21 +6,21 @@ import axios from "axios";
 
 const PokemonCard = (props) => {
 const navigate = useNavigate();
-const {name, url} = props;
+const {name, url, id} = props;
 const [poke, setPoke] = useState([])
 
 useEffect(()=>{
         axios.get(url)
         .then((res)=>{
-          console.log(res)
             setPoke(res.data.sprites.front_default)
+            
         })
         .catch((err) =>{
-            alert('Ocorreu um erro')
+            console.log(err)
         })
     },[url])
 
-console.log(poke)
+
 
   return (
     <CardContainer>      
@@ -28,8 +28,8 @@ console.log(poke)
       <ProductImage alt={name} src={poke} />
      
         <ButtonContainer>
-        <Button onClick={() => navigate("pokedexpage")}>Visualizar pokedex</Button>
-        <Button onClick={() => navigate("/detailspage/:id")}>Detalhes do Pokemon</Button>
+        <Button onClick={() =>props.addToPokedex(id, url)}>Adicionar a pokedex</Button>
+        <Button onClick={() => navigate("detailspage/:id")}>Detalhes do Pokemon</Button>
         </ButtonContainer>
     </CardContainer>
   );
