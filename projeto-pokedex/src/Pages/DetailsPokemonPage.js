@@ -2,11 +2,11 @@ import { useNavigate } from "react-router-dom";
 import { goToListPokePage } from "../Router/coordinator";
 import { goToPokedexPage } from "../Router/coordinator";
 import { useEffect, useState } from "react";
-import axios from "axios";
 import { BASE_URL } from "../Constants/BASE_URL";
 import { useParams } from "react-router-dom";
 import Header from "../components/Header";
 import { Ataques, Container, ContainerInfo, PokemonVerso, PokemonFrente, PokemonTamanho, PokemonStatus, PokemonTipo } from "./DetailsPageStyled";
+import axios from "axios";
 
 
 const DetailsPokemonPage = () => {

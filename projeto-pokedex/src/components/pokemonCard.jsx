@@ -3,6 +3,7 @@ import { ProductImage,  CardContainer,  Button,  ButtonContainer} from "./Styled
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { goToDetailsPokemonPage } from "../Router/coordinator";
 
 const PokemonCard = (props) => {
 const navigate = useNavigate();
@@ -20,17 +21,14 @@ useEffect(()=>{
         })
     },[url])
 
-
-
-  return (
+    return (
     <CardContainer>      
 
       <ProductImage alt={name} src={poke} />
      
         <ButtonContainer>
-
         <Button onClick={() =>props.addToPokedex(id)}>Adicionar a pokedex</Button>
-        <Button onClick={() => navigate("detailspage/:id")}>Detalhes do Pokemon</Button>
+        <button onClick={() => goToDetailsPokemonPage(navigate)}>Visualizar Detalhes</button> 
         </ButtonContainer>
     </CardContainer>
   );

@@ -8,8 +8,6 @@ const ListPokePage = (props) => {
   const {pokedex, setPokedex} = props;
   let{pokemons} = props
 
-  // const pokemons = useRequestData('https://pokeapi.co/api/v2/pokemon');
-
   const addToPokedex = (pokemon) =>{
     const copy = [...pokedex, pokemon]
       setPokedex(copy);
@@ -24,9 +22,8 @@ const ListPokePage = (props) => {
     if(index){
     pokemons.splice(index, 1)};
 
-    console.log(pokemons)   
-  }
-
+    console.log(pokemons) 
+ }
 return (
     <ContainerPrinc>  
           <ImgLogo src="assets/logo-poke.png"/>
@@ -38,6 +35,6 @@ return (
          </ListContainer>           
     </ContainerPrinc>
   );
-};
+}
 
 export default ListPokePage;
