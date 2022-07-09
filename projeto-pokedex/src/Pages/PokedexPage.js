@@ -16,11 +16,18 @@ const PokedexPage = (props) => {
       <>
         <h1><u>Pokedex Page</u></h1>
         <Header/>
+
+
+        {pokedex && pokedex.map((pokemon)=>{
+          return <PokemonCard key={pokemon.id}  id={pokemon.name}  name={pokemon.name} url={pokemon.url}/>
+        })}
+
         <ListContainer>
           {pokedex && pokedex.map((pokemon)=>{
             return <PokemonCard key={pokemon.id}  id={pokemon.name} url={pokemon}/>
           })}
         </ListContainer>
+
       </>
     );
   };
