@@ -1,7 +1,15 @@
 *{
+<<<<<<< HEAD
   margin: 0;
   padding: 0;
 }
+=======
+  padding:0;
+  margin:0;
+    }
+>>>>>>> master
+
+
 
 body {
   font-family:'Times New Roman', Times, serif;

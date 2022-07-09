@@ -28,8 +28,13 @@ useEffect(()=>{
       <ProductImage alt={name} src={poke} />
      
         <ButtonContainer>
+<<<<<<< HEAD
         <Button onClick={() =>props.addToPokedex(id, url)}>Adicionar a pokedex</Button>
         <Button onClick={() => navigate("detailspage/:id")}>Detalhes do Pokemon</Button>
+=======
+        <Button onClick={() =>props.addToPokedex(id)}>Adicionar a pokedex</Button>
+        <Button onClick={() => navigate("detailspage")}>Detalhes do Pokemon</Button>
+>>>>>>> master
         </ButtonContainer>
     </CardContainer>
   );
