@@ -1,0 +1,1 @@
+export const BASE_URL = 'https://pokecoapi.co/api/v2/pokemon';
